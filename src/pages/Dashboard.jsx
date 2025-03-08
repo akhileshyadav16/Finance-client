@@ -15,7 +15,7 @@ function Dashboard(){
                 const fetchExpenses = async () => {
                   try {
                     const response = await fetch(
-                      `${process.env.REACT_APP_BASE_URL}/api/v1/get-expenses`,
+                      `${import.meta.env.VITE_API_URL}/api/v1/get-expenses`,
                       {
                         method: "GET",
                         headers: {

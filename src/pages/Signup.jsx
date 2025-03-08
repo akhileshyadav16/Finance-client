@@ -41,7 +41,7 @@ function Signup(){
     const submitHandler = async (e) => {
     e.preventDefault();
         try {
-          const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/signup`, {
+          const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/signup`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
@@ -57,6 +57,8 @@ function Signup(){
     
         }
       };
+
+      console.log(formData)
 
     return(
         <div className="w-full h-full  text-black py-10">

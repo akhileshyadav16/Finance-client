@@ -25,7 +25,7 @@ function Expenses(){
         e.preventDefault();
             try {
                 const token = localStorage.getItem('token');
-              const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/create-expense`, {
+              const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/create-expense`, {
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json",
@@ -50,7 +50,7 @@ function Expenses(){
           const deleteHandler = async (_id) => {
             try {
               const response = await fetch(
-                `${process.env.REACT_APP_BASE_URL}/api/v1/delete-expense/${_id}`,
+                `${import.meta.env.VITE_API_URL}/api/v1/delete-expense/${_id}`,
                 {
                   method: "DELETE",
                   headers: { 
@@ -76,7 +76,7 @@ function Expenses(){
             const fetchExpenses = async () => {
               try {
                 const response = await fetch(
-                  `${process.env.REACT_APP_BASE_URL}/api/v1/get-expenses`,
+                  `${import.meta.env.VITE_API_URL}/api/v1/get-expenses`,
                   {
                     method: "GET",
                     headers: {

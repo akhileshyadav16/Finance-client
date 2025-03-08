@@ -29,7 +29,7 @@ function Login({ onLogin }){
     const submitHandler = async (e) => {
         e.preventDefault();
             try {
-              const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/login`, {
+              const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
