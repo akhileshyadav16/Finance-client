@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { CiWallet } from "react-icons/ci";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { RiPieChartLine } from "react-icons/ri";
-import MyPieChart from "../components/MyPiechart";
-import MyBarChart from "../components/MyBarChart";
+import MyPieChart from "../component/MyPieChart";
+import MyBarChart from "../component/MyBarChart";
 import { IoIosTrendingUp } from "react-icons/io";
 
 function Dashboard(){
